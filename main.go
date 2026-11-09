@@ -38,6 +38,8 @@ func handleConn(conn net.Conn, db map[string]string) {
             return
         }
 
+        fmt.Println("dadasdasd")
+
         reply := handleCommand(command, db)
         if err := writer.Write(reply); err != nil {
             fmt.Println(err)
@@ -79,4 +81,6 @@ func handleCommand(v Value, db map[string]string) Value {
     default:
         return Value{typ: "error", str: "noma’lum buyruq"}
     }
+
+
 }
