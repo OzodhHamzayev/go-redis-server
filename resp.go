@@ -192,6 +192,7 @@ func (v Value) marshallError() []byte {
 	bytes = append(bytes, ERROR)
 	bytes = append(bytes, v.str...)
 	bytes = append(bytes, '\r', '\n')
+	fmt.Println("a")
 
 	return bytes
 }
